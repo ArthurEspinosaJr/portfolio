@@ -1,0 +1,333 @@
+/* === Layout and Theme Styling === */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9fafc;
+  color: #2c2c2c;
+  display: flex;
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 80px;
+  background: #ffffff;
+  border-right: 1px solid #e0e0e0;
+  padding: 1rem 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.04);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.sidebar .logo {
+  width: 48px;
+  margin: 0 auto 2rem;
+}
+
+/* Navigation list */
+.nav {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: flex-start;
+}
+
+.nav li {
+  width: 100%;
+  text-align: center;
+}
+
+.nav a {
+  display: block;
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #444;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  opacity: 0;
+}
+
+.sidebar:hover .nav a {
+  opacity: 0;
+  text-align: center;
+}
+
+.nav a:hover {
+  background-color: #f0f4f8;
+}
+
+/* Main panel layout */
+.main {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  overflow-y: auto;
+}
+
+header {
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Card container for each section */
+.card {
+  flex: 1 1 calc(48% - 1rem);
+  background-color: white;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.card-header h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+.card-body p,
+.card-body ul {
+  font-size: 1.15rem;
+  line-height: 1.75;
+  color: #2a2a2a;
+  font-weight: 450;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Plotly graph container */
+.plot {
+  width: 100%;
+  height: 320px;
+  margin-top: 1rem;
+}
+
+
+
+
+
+
+.suggestions .swiper-slide.box img,
+.card-body .swiper-slide.box img {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.suggestions .swiper-slide.box h3,
+.card-body .swiper-slide.box h3 {
+  font-size: 1.5rem;
+  color: #3b82f6;
+  margin-bottom: 0.5rem;
+}
+
+.suggestions .swiper-slide.box p,
+.card-body .swiper-slide.box p {
+  font-size: 1.15rem;
+  line-height: 1.75;
+  color: #2a2a2a;
+  font-weight: 450;
+  color: #555;
+  line-height: 1.6;
+}
+
+
+/* Fill white space and balance layout */
+body {
+  background-color: #f1f5f9;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  padding: 0.5rem 0.75rem;
+}
+
+/* Card container for each section */
+.card {
+  flex: 1 1 calc(48% - 1rem);
+  background-color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1rem;
+}
+
+.card.full-width {
+  flex: 1 1 100%;
+}
+
+/* Swiper slider wrapper */
+.swiper-wrapper {
+  padding: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+  /* Card container for each section */
+.card {
+    flex: 1 1 100%;
+  }
+}
+
+
+.graph-info {
+  margin-top: 1rem;
+}
+
+.graph-info h4 {
+  font-size: 1.1rem;
+  color: #1e3a8a;
+  margin: 0.5rem 0 0.2rem;
+}
+
+.graph-info p {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 0.75rem;
+}
+
+.card .js-plotly-plot {
+  width: 100% !important;
+}
+
+
+
+/* Responsive card group */
+.card-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+}
+
+.card-group /* Card container for each section */
+.card {
+  flex: 1 1 42%;
+}
+
+@media (max-width: 768px) {
+  .card-group /* Card container for each section */
+.card {
+    flex: 1 1 100%;
+  }
+}
+
+.suggestions .swiper-slide.box h3,
+.card-body .swiper-slide.box h3 {
+  text-align: center;
+}
+
+.suggestions .swiper-slide.box p,
+.card-body .swiper-slide.box p {
+  text-align: center;
+}
+
+
+.sidebar .logo {
+  width: 48px;
+  margin: 0 auto 2rem;
+}
+
+.sidebar:hover .nav a {
+  opacity: 0;
+  text-align: center;
+}
+
+
+.sidebar:hover {
+  width: 160px;
+  align-items: flex-start;
+  padding-left: 1rem;
+}
+
+.sidebar .logo {
+  width: 70px;
+  margin: 0 auto 2rem;
+}
+
+.sidebar:hover .nav a {
+  opacity: 1;
+  text-align: center;
+}
+
+
+/* Custom Section Headings */
+#temperature .card-header h2 {
+  color: #3b82f6;
+  font-size: 1.9rem;
+}
+#noise .card-header h2 {
+  color: #1e40af;
+  font-size: 1.9rem;
+}
+#lighting .card-header h2 {
+  color: #3b82f6;
+  font-size: 1.9rem;
+}
+
+
+/* Enhanced and Color-Coordinated Section Headings */
+#overview .card-header h2 {
+  color: #1e3a8a;
+  font-size: 1.9rem;
+}
+
+#temperature .card-header h2 {
+  color: #3b82f6;
+  font-size: 1.9rem;
+}
+
+#noise .card-header h2 {
+  color: #1e40af;
+  font-size: 1.9rem;
+}
+
+#lighting .card-header h2 {
+  color: #2563eb;
+  font-size: 1.9rem;
+}
+
+#recommendations .card-header h2 {
+  color: #3b82f6;
+  font-size: 1.9rem;
+}
+
+
+/* Bigger Main Page Heading */
+header h1 {
+  font-size: 2.6rem;
+  color: #1e3a8a;
+}
+
+/* Bigger Overview Section Title */
+#overview .card-header h2 {
+  color: #1e3a8a;
+  font-size: 2.1rem;
+}

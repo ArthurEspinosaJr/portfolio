@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>
+   Comfort Dashboard
+  </title>
+<link href="comfort_dashboard_professional.css" rel="stylesheet"/>
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js">
+</script>
+<script src="https://d3js.org/d3.v6.min.js">
+</script>
+</head>
+<body>
+<!-- Sidebar Navigation -->
+<div class="sidebar" id="sidebar">
+<img alt="Comfort Logo" class="logo" src="cosy.png"/>
+<ul class="nav">
+<li>
+<a href="#overview">
+      Overview
+     </a>
+</li>
+<li>
+<a href="#temperature">
+      Temperature
+     </a>
+</li>
+<li>
+<a href="#noise">
+      Noise
+     </a>
+</li>
+<li>
+<a href="#lighting">
+      Lighting
+     </a>
+</li>
+<li>
+<a href="#recommendations">
+      Suggestions
+     </a>
+</li>
+</ul>
+</div>
+<!-- Main Content Area -->
+<div class="main">
+<header>
+<h1>
+     Building Comfort Insights
+    </h1>
+<p>
+     Visualising patterns of discomfort across indoor environments
+    </p>
+</header>
+<!-- Overview Section -->
+<section class="card" id="overview">
+<div class="card-header">
+<h2>
+Overview
+     </h2>
+</div>
+<div class="card-body">
+<p>
+      This dashboard presents insights gathered from real environmental sensor data collected throughout 2019 in modern indoor workspaces. 
+      It brings to light subtle discomforts often overlooked—like heat spikes during the afternoon, elevated noise levels that disrupt focus, or lighting dips that drain energy. 
+      These conditions may seem minor at first but can significantly impact wellbeing, concentration, and overall productivity over time. 
+      By visualising these patterns, this tool helps facilities teams and decision-makers intervene early, 
+      make evidence-based improvements, and design spaces that truly support the people within them.
+
+
+     </p>
+</div>
+</section>
+<!-- Temperature Graph Section -->
+<section class="card" id="temperature">
+<div class="card-header">
+<h2>
+      Temperature
+     </h2>
+</div>
+<div class="card-body" style="display: flex; flex-direction: row; gap: 1.25rem;">
+<div class="plot" id="tempPlot" style="flex: 1; width: 100%; height: 100%; min-width: 0;">
+</div>
+<div style="flex: 1; max-width: 180px; margin: left 3px;;">
+<p>Comfort isn’t just about feeling warm or cool—it’s about staying sharp and energised throughout the day. When temperatures swing too far in either direction, our mood and productivity suffer. This visual helps you catch patterns early—before an unexpected heat spike or cold draft derails your focus.</p>
+</div>
+</div>
+</section>
+<div class="card-group" style="display: flex; flex-wrap: wrap; gap: 2rem; margin-bottom: 2rem;">
+<!-- Noise Graph Section -->
+<section class="card" id="noise" style="flex: 1 1 30%;">
+<div class="card-header">
+<h2>
+       Noise Levels
+      </h2>
+</div>
+<div class="card-body" style="display: flex; gap: 2rem;">
+<div class="plot" id="noisePlot" style="flex: 2;">
+</div>
+<div style="flex: 1;">
+<p>Constant background noise may go unnoticed, but it quietly chips away at our concentration. Whether it's the hum of conversations or the clatter of office life, this chart reveals when soundscapes support deep work—and when they're causing unnecessary stress.</p>
+</div>
+</div>
+</section>
+<!-- Lighting Graph Section -->
+<section class="card" id="lighting" style="flex: 1 1 30%;">
+<div class="card-header">
+<h2>
+       Lighting
+      </h2>
+</div>
+<div class="card-body" style="display: flex; gap: 2rem;">
+<div class="plot" id="lightPlot" style="flex: 2;">
+</div>
+<div style="flex: 1;">
+<p>Lighting sets the rhythm of a space. Too dim and your energy dips; too harsh and eyestrain creeps in. By uncovering shifts in brightness across the day, this graph empowers you to create a workspace that feels bright, balanced, and in tune with your natural rhythm.</p>
+</div>
+</div>
+</section>
+</div>
+<!-- Suggestions Section with Slider -->
+<section class="card" id="recommendations">
+<link href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" rel="stylesheet"/>
+<div class="card-header">
+<h2>
+      Suggestions
+     </h2>
+</div>
+<div class="card-body">
+<div class="swiper suggestion-slider swiper-initialized">
+<div class="swiper-wrapper">
+<div class="swiper-slide box card" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0.5rem; font-size: 0.9rem;">
+<h3>
+         Use ergonomic furniture
+        </h3>
+<p>
+         Provide chairs and desks that support good posture to reduce physical strain and boost focus.
+        </p>
+</div>
+<div class="swiper-slide box card" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0.5rem; font-size: 0.9rem;">
+<h3>
+         Integrate indoor plants
+        </h3>
+<p>
+         Greenery can reduce stress, purify the air, and improve overall workplace aesthetics.
+        </p>
+</div>
+<div class="swiper-slide box card" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0.5rem; font-size: 0.9rem;">
+<h3>
+         Install noise-cancelling panels
+        </h3>
+<p>
+         Helps absorb disruptive sound and create a quieter, more focused workspace.
+        </p>
+</div>
+<div class="swiper-slide box card" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0.5rem; font-size: 0.9rem;">
+<h3>
+         Offer flexible lighting
+        </h3>
+<p>
+         Adjustable lighting helps cater to individual preferences and reduce eye strain.
+        </p>
+</div>
+<div class="swiper-slide box card" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0.5rem; font-size: 0.9rem;">
+<h3>
+         Encourage regular breaks
+        </h3>
+<p>
+         Scheduled pauses boost productivity and mental health by preventing burnout.
+        </p>
+</div>
+<div class="swiper-slide box card" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0.5rem; font-size: 0.9rem;">
+<h3>
+         Maintain optimal humidity
+        </h3>
+<p>
+         Balanced humidity enhances comfort and prevents dryness-related health issues.
+        </p>
+</div>
+<div class="swiper-slide box card" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0.5rem; font-size: 0.9rem;">
+<h3>
+         Promote personalized temperature zones
+        </h3>
+<p>
+         Allowing users to influence thermal settings improves satisfaction and comfort.
+        </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js">
+</script>
+<script>
+   var swiper = new Swiper(".suggestion-slider", {
+        spaceBetween: 20,
+        grabCursor: true,
+        loop: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false
+        },
+        breakpoints: {
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 }
+        }
+      });
+  </script>
+<!-- JavaScript Logic -->
+<script src="comfort_dashboard.js">
+</script><script>
+function showModalWithContent(sectionId) {
+  const section = document.querySelector(sectionId);
+  if (!section) return;
+
+  const modal = document.getElementById('graphModal');
+  const overlay = document.getElementById('modalOverlay');
+  const modalContent = document.getElementById('modalContent');
+
+  modalContent.innerHTML = "";
+  const clone = section.cloneNode(true);
+  clone.style.maxHeight = "70vh";
+  clone.style.overflowY = "auto";
+  modalContent.appendChild(clone);
+
+  modal.style.display = "block";
+  overlay.style.display = "block";
+
+  // Resize Plotly graphs inside modal
+  const plots = clone.querySelectorAll(".js-plotly-plot");
+  plots.forEach(p => Plotly.Plots.resize(p));
+}
+
+function closeModal() {
+  document.getElementById('graphModal').style.display = 'none';
+  document.getElementById('modalOverlay').style.display = 'none';
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('.nav a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      showModalWithContent(targetId);
+    });
+  });
+});
+</script>
+<div id="graphModal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%);
+ background:white; border-radius:12px; box-shadow:0 0 20px rgba(0,0,0,0.3); z-index:1000; padding:1rem; max-width:90vw; max-height:80vh; overflow:auto;">
+<span onclick="closeModal()" style="position:absolute; top:10px; right:14px; font-size:1.5rem; cursor:pointer;">×</span>
+<div id="modalContent"></div>
+</div>
+<div id="modalOverlay" onclick="closeModal()" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh;
+ background:rgba(0,0,0,0.4); z-index:999;"></div>
+</body>
+</html>
